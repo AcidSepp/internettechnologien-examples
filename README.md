@@ -5,5 +5,5 @@ PRs welcome!
 
 ## Slides
 
-- Place your slides in the `slides` directory, to enable opening the examples directly from the slides.
+- Place the slides you download from moodle in the `slides` directory, to enable opening the examples directly from the slides.
 - Start the Server with `./gradlew examples:bootRun`
