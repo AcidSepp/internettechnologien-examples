@@ -1,0 +1,18 @@
+<html lang="en">
+    <head>
+        <title>Execution Order</title>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("target1").style.color = "red"
+                document.getElementById("target4").style.color = "blue"
+                document.getElementById("target2").style.color = "green"
+            });
+        </script>
+    </head>
+    <body id="foo">
+        <div id="target1">Test <b>1</b></div>
+        <div id="target2">Test <b>2</b></div>
+        <div id="target3">Test <b>3</b></div>
+        <div id="target4">Test <b>4</b></div>
+    </body>
+</html>

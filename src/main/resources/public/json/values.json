@@ -1,0 +1,8 @@
+{
+  "anInteger": 5,
+  "aDouble": 5.5,
+  "aString": "foo",
+  "aBoolean": true,
+  "anArray": [],
+  "anObject": {}
+}

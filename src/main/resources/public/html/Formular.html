@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="de">
+    <head><title>Formular</title></head>
+    <body>
+        <form oninput="Name.value=Vname.value+ ' ' + Nname.value">
+            <label for="Vname">Vorname:</label>
+            <input type="text" id="Vname" value="Vorname"/>
+
+            <label for="Nname">Nachname:</label>
+            <input type="text" id="Nname" value="Nachname"/>
+            <progress id="Fortschritt" value="50" max="100"></progress>
+            <br/>
+            Guten Tag
+            <output name="Name" for="Vname Nname"></output>
+            <br/>
+            <button type="button" onclick="alert('Danke! '+ Name.value)">Absenden!</button>
+            <button type="button" onclick="alert('Auf Wiedersehen ' + Name.value)">abbrechen!</button>
+        </form>
+    </body>
+</html>

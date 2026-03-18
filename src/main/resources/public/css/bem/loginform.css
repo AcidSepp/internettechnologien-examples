@@ -1,0 +1,31 @@
+.myForm {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.myForm__username {
+    border-color: darkred;
+    font-size: 30px;
+}
+
+.myForm__username--invalid {
+    background-color: lightpink;
+}
+
+.myForm__username--valid {
+    background-color: lightgreen;
+}
+
+.myForm__password {
+    border-color: darkred;
+    font-size: 30px;
+}
+
+.myForm__rememberMe {
+    border-color: darkred;
+    font-size: 30px;
+}
+
+

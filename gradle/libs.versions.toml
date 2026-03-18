@@ -1,0 +1,30 @@
+[versions]
+assertj = "3.27.7"
+bson = "5.4.0"
+jackson = "2.18.3"
+jakarta-xml-bind = "4.0.2"
+jaxb-runtime = "4.0.5"
+json-schema = "1.5.6"
+junit-jupiter = "6.0.2"
+kotlin = "2.3.0"
+mockito = "5.18.0"
+spring-boot = "4.0.2"
+spring-dependency-management = "1.1.7"
+
+[libraries]
+assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+bson = { module = "org.mongodb:bson", version.ref = "bson" }
+jackson = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jakarta-xml-bind = { module = "jakarta.xml.bind:jakarta.xml.bind-api", version.ref = "jakarta-xml-bind" }
+jaxb-runtime = { module = "org.glassfish.jaxb:jaxb-runtime", version.ref = "jaxb-runtime" }
+json-schema = { module = "com.networknt:json-schema-validator", version.ref = "json-schema" }
+mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+spring-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
+spring-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+spring-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+springBoot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+springDeps = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://lecture-schema.json",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "semester": {
+      "type": "string"
+    },
+    "course": {
+      "type": "string"
+    },
+    "lecturer": {
+      "type": "object",
+      "properties": {
+        "first-name": {
+          "type": "string"
+        },
+        "last-name": {
+          "type": "string"
+        },
+        "_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "first-name",
+        "last-name",
+        "_id"
+      ],
+      "additionalProperties": false
+    },
+    "books": {
+      "type": "array",
+      "items": {
+        "required": [
+          "title",
+          "author",
+          "year",
+          "isbn"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "year": {
+            "type": "string"
+          },
+          "isbn": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "classes": {
+      "type": "array",
+      "items": {
+        "required": [
+          "date",
+          "_id"
+        ],
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "name",
+    "semester",
+    "course",
+    "lecturer",
+    "books",
+    "classes"
+  ],
+  "additionalProperties": false
+}

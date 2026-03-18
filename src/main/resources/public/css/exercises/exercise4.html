@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="en">
+    <head>
+        <title>Exercise 0</title>
+        <style>
+            div > div > div > [foo] + div {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>
+                <div>
+                    Hallo 1
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <div foo="bar">
+                        Hallo 2
+                    </div>
+                    <div>
+                        Hallo 3
+                    </div>
+                    <div>
+                        Hallo 4
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

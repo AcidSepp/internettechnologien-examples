@@ -1,0 +1,64 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="course">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="IF"/>
+            <xs:enumeration value="WIF"/>
+            <xs:enumeration value="DVM"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="lecture">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="semester" type="xs:string"/>
+                <xs:element name="course" type="course"/>
+
+                <xs:element name="lecturer">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="first-name" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="last-name"/>
+                        </xs:sequence>
+                        <xs:attribute name="id"
+                                      type="xs:positiveInteger"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="books" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="book" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="title" minOccurs="0" type="xs:string"/>
+                                        <xs:element name="author" minOccurs="0" type="xs:string"/>
+                                        <xs:element name="year" minOccurs="0" type="xs:positiveInteger"/>
+                                        <xs:element name="isbn" minOccurs="0" type="xs:positiveInteger"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="classes" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="class" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="date" minOccurs="0" type="xs:date"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id"
+                                                  type="xs:positiveInteger"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

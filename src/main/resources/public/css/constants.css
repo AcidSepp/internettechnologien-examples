@@ -1,0 +1,16 @@
+@property --main-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: black;
+}
+
+@property --main-bg-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: lightgray;
+}
+
+body {
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+}

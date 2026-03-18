@@ -1,0 +1,10 @@
+let memo = {
+    // comments!!!
+    from: "Stefanie Studierende",
+    "to": "Yannick Weber",
+    "message": "Guten Tag Herr Weber,\
+    bitte hoeren Sie auf Schleichwerbung \
+    fuer Ihre Band in der Vorlesung zu machen!",
+}
+
+console.log(memo)

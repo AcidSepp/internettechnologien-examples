@@ -1,0 +1,16 @@
+<html lang="en">
+    <head>
+        <title>Execution Order</title>
+    </head>
+    <body>
+        <div class="target">Test 1</div>
+        <div class="target">Test 2</div>
+        <div class="target">Test 3</div>
+        <script type="text/javascript">
+            document.querySelectorAll(".target").forEach((it) => {
+                it.innerHTML = "MODIFIED"
+            })
+        </script>
+        <div class="target">Test 4</div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "$schema": "nested-schema.json",
+  "foo": {
+    "bar": "baz"
+  }
+}

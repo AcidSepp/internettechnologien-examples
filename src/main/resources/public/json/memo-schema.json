@@ -1,0 +1,26 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$id" : "//memo-schema.json",
+  "title" : "Memo",
+  "description" : "Memo",
+  "type" : "object",
+  "properties" : {
+    "from" : {
+      "description" : "The sender of the memo",
+      "type" : "string"
+    },
+    "to" : {
+      "description" : "The receiver of the memo",
+      "type" : "string"
+    },
+    "message" : {
+      "description" : "the content of the memo",
+      "type" : "string"
+    }
+  },
+  "required" : [
+    "from",
+    "to",
+    "message"
+  ]
+}

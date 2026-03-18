@@ -1,0 +1,29 @@
+{
+  "$schema": "lecture-schema.json",
+  "name": "Visual Analytics",
+  "semester": "SS2025",
+  "course": "IF",
+  "lecturer": {
+    "first-name": "Yannick",
+    "last-name": "Weber",
+    "_id": "1234"
+  },
+  "books": [
+    {
+      "title": "The Visual Display of Quantitative Information",
+      "author": "E. Tufte",
+      "year": "2001",
+      "isbn": "1930824130"
+    }
+  ],
+  "classes": [
+    {
+      "date": "2025-01-01",
+      "_id": "1"
+    },
+    {
+      "date": "2025-01-08",
+      "_id": "2"
+    }
+  ]
+}

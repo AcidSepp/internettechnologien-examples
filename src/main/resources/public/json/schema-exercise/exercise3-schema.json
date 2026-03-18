@@ -1,0 +1,14 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$id": "//exercise3-schema.json",
+  "type" : "object",
+  "properties" : {
+    "foo" : {
+      "type" : "string"
+    },
+    "$schema" : {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,1 @@
+check-jsonschema lecture.json --schemafile lecture-schema.json

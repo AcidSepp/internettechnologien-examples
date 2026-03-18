@@ -1,0 +1,4 @@
+{
+  "$schema": "foobar-required-schema.json",
+  "foo": "bar"
+}

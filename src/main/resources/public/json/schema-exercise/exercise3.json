@@ -1,0 +1,4 @@
+{
+  "$schema" : "exercise3-schema.json",
+  "bar": "foo"
+}

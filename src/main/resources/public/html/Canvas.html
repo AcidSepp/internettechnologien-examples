@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="de">
+    <head>
+        <title>Canvas</title>
+
+   </head>
+    <body>
+    <center>
+        <h1>Canvas</h1>
+        <canvas id="myCanvas" width="200" height="200">
+            Canvas wird leider nicht unterstützt!
+       </canvas>
+        <footer onmouseover="interval=setInterval(decorate, 200); iv2=setInterval(winkel++,200)" onmouseout="clearInterval(interval);"> Hier steht die Fußzeile hinter der Canvas!</footer>
+   </center>
+
+    <script type="text/javascript">
+        var winkel=0;
+        var offset=0;
+        var canvas=document.getElementById('myCanvas');
+        var ctx=canvas.getContext('2d');
+        draw();
+        
+        function draw()
+        {
+
+            ctx.globalAlpha=0.7;   
+            ctx.fillStyle='#FF0000';
+            ctx.fillRect(0,0,100,100);
+        
+            var grd=ctx.createLinearGradient(70,70,200,100);
+            grd.addColorStop(0,"#00FF00");
+            grd.addColorStop(1,"#FF0000");
+            ctx.fillStyle=grd;
+            ctx.fillRect(70,70,200,100);
+            ctx.globalAlpha=1;
+            ctx.fillStyle='#0000FF';
+            ctx.beginPath();
+            ctx.arc(50,50,15,0,Math.PI*2,true);
+            ctx.closePath();
+            ctx.fill();       
+        }
+
+        function decorate()
+        {
+            if(offset==5) {
+                offset=0;
+            } else
+            {
+                offset++;
+            }
+            ctx.clearRect(0, 0, 200, 200);
+            draw();
+            ctx.rotate(winkel/360);
+            for(var i=0+offset; i<20; i=i+3)
+            {
+                ctx.beginPath();
+                ctx.moveTo(10+i, 10+i);
+                ctx.lineTo(10+i, 90-i);
+                ctx.lineTo(90-i, 90-i);
+                ctx.lineTo(90-i, 10+i);
+                ctx.lineTo(10+i, 10+i);
+                ctx.strokeStyle='#FFFFFF';
+                ctx.closePath();
+                ctx.stroke();
+            }
+        }
+        
+   </script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="en">
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-item {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: solid 2px black;
+            flex: 50%;
+        }
+
+        @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+</div>
+
+</body>
+</html>
