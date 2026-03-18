@@ -1,1 +1,3 @@
-rootProject.name = "examples"
+rootProject.name = "internettechnologien-examples"
+
+include("examples")
