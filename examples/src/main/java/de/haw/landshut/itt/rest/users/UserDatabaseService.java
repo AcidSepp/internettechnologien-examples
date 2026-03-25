@@ -13,6 +13,9 @@ import java.util.UUID;
 public class UserDatabaseService {
 // snippet: /service
 
+    public UserDatabaseService() {
+        userHashMap.put("1", new UserWithId("alice", "alice@haw-landshut.de", "1"));
+    }
 
     private final HashMap<String, UserWithId> userHashMap = new HashMap<>();
 
