@@ -1,8 +1,5 @@
-package de.haw.landshut.itt;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.IOException;
+import de.haw.landshut.itt.Memo;
 
 import static com.fasterxml.jackson.core.json.JsonReadFeature.ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER;
 import static com.fasterxml.jackson.core.json.JsonReadFeature.ALLOW_JAVA_COMMENTS;
@@ -14,28 +11,25 @@ import static com.fasterxml.jackson.core.json.JsonReadFeature.ALLOW_TRAILING_COM
 import static com.fasterxml.jackson.core.json.JsonReadFeature.ALLOW_TRAILING_DECIMAL_POINT_FOR_NUMBERS;
 import static com.fasterxml.jackson.core.json.JsonReadFeature.ALLOW_UNQUOTED_FIELD_NAMES;
 
-public class Json5Experiment {
 
-    public static void main(String[] args) throws IOException {
+void main() throws IOException {
 // snippet: Json5Experiment
-        var mapper = new ObjectMapper();
+    var mapper = new ObjectMapper();
 
-        var objectReader = mapper.readerFor(Memo.class)
-                .with(ALLOW_UNQUOTED_FIELD_NAMES)
-                .with(ALLOW_TRAILING_COMMA)
-                .with(ALLOW_SINGLE_QUOTES)
-                .with(ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER)
-                .with(ALLOW_NON_NUMERIC_NUMBERS)
-                .with(ALLOW_JAVA_COMMENTS)
-                .with(ALLOW_LEADING_DECIMAL_POINT_FOR_NUMBERS)
-                .with(ALLOW_TRAILING_DECIMAL_POINT_FOR_NUMBERS)
-                .with(ALLOW_LEADING_PLUS_SIGN_FOR_NUMBERS);
+    var objectReader = mapper.readerFor(Memo.class)
+            .with(ALLOW_UNQUOTED_FIELD_NAMES)
+            .with(ALLOW_TRAILING_COMMA)
+            .with(ALLOW_SINGLE_QUOTES)
+            .with(ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER)
+            .with(ALLOW_NON_NUMERIC_NUMBERS)
+            .with(ALLOW_JAVA_COMMENTS)
+            .with(ALLOW_LEADING_DECIMAL_POINT_FOR_NUMBERS)
+            .with(ALLOW_TRAILING_DECIMAL_POINT_FOR_NUMBERS)
+            .with(ALLOW_LEADING_PLUS_SIGN_FOR_NUMBERS);
 // snippet: /Json5Experiment
 
-
-        try (var resource = JsonParsing.class.getResourceAsStream("/public/json/memo.json5")) {
-            final var lecture = objectReader.readValue(resource);
-            System.out.println(lecture);
-        }
+    try (var resource = getClass().getResourceAsStream("/public/json/memo.json5")) {
+        final var lecture = objectReader.readValue(resource);
+        IO.println(lecture);
     }
 }

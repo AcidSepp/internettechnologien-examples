@@ -1,16 +1,13 @@
-package de.haw.landshut.itt;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
+import de.haw.landshut.itt.JsonLecture;
 
 import java.io.IOException;
 
-public class JsonParsing {
-    public static void main(String[] args) throws IOException {
-        var mapper = new ObjectMapper();
+void main() throws IOException {
+    var mapper = new ObjectMapper();
 
-        try (var resource = JsonParsing.class.getResourceAsStream("/public/json/lecture.json")) {
-            final var lecture = mapper.readValue(resource, JsonLecture.class);
-            System.out.println(lecture);
-        }
+    try (var resource = getClass().getResourceAsStream("/public/json/lecture.json")) {
+        final var lecture = mapper.readValue(resource, JsonLecture.class);
+        IO.println(lecture);
     }
 }

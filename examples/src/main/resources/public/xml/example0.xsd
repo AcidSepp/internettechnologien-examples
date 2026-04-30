@@ -1,9 +1,31 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="root">
         <xs:complexType>
-            <xs:sequence>
-                <xs:element name="foo" type="xs:string"/>
-            </xs:sequence>
+            <xs:all>
+                <xs:element name="car" minOccurs="0">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="ha" type="xs:string"/>
+                        </xs:all>
+                        <xs:attribute name="so" type="xs:string"/>
+                    </xs:complexType>
+
+                </xs:element>
+                <xs:element name="foo" type="xs:integer"/>
+                <xs:element name="leeresDing">
+                    <xs:complexType>
+                        <xs:attribute name="bar"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
         </xs:complexType>
     </xs:element>
+    <xs:simpleType name="autoMarke">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Audi"/>
+            <xs:enumeration value="BMW"/>
+            <xs:enumeration value="Mercedes"/>
+            <xs:enumeration value="Schmarrn"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

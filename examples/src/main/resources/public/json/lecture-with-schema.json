@@ -1,4 +1,5 @@
 {
+  "$schema": "lecture-schema.json",
   "name": "Visual Analytics",
   "semester": "SS2025",
   "course": "IF",

@@ -1,4 +1,7 @@
 <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="example0.xsd">
-    <foo>bar</foo>
+<!--    darf ich so einen schmarrn machen-->
+    <foo>2</foo>
+    <car so="irgendwie"><ha>hue</ha></car>
+    <leeresDing bar="foo"/>
 </root>
